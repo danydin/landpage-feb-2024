@@ -26,7 +26,9 @@
 @font-face {
   font-family: FbSpoiler-Regular;
   src: url(./fonts/FbSpoiler-Regular.otf);
-}@font-face {
+}
+
+@font-face {
   font-family: FbSpoiler-Light;
   src: url(./fonts/FbSpoiler-Light.otf);
 }
@@ -35,6 +37,7 @@
   font-family: AdobeHebrew-Regular;
   src: url(./fonts/AdobeHebrew-Regular.otf);
 }
+
 body {
   overflow: auto;
   white-space: wrap;
@@ -249,7 +252,7 @@ body {
   font-family: FbSpoiler-Black;
   background-color: transparent;
   border-radius: 15px;
-  width: 250px;
+  width: 150px;
   margin: 0;
 }
 
@@ -264,6 +267,10 @@ select {
   outline: none;
   color: var(--primary-color);
   font-weight: bold;
+}
+
+.selection {
+  pointer-events: none !important;
 }
 
 .select2:hover {
@@ -343,8 +350,8 @@ input::placeholder {
 
 .select2 {
   margin-bottom: 10px;
-  height: 35px;
-  width: 250px !important;
+  height: 40px;
+  width: 100%;
   max-width: 400px;
   border: 1px solid var(--primary-color);
   background: transparent !important;
@@ -352,15 +359,20 @@ input::placeholder {
   font-size: 25px;
   border-radius: 8px;
   font-family: "FbSpoiler-Bold";
-  display: flex;
-  align-items: center;
-  padding: 20px;
 }
 
 .select2-container--default .select2-selection--single {
   background-color: transparent !important;
   border: none !important;
   outline: none !important;
+}
+
+.select2-container {
+  display: flex !important;
+  width: 100% !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
@@ -450,7 +462,7 @@ hr {
   font-family: "FbSpoiler-Bold";
   letter-spacing: 2px;
   text-align: center;
-  font-size: 20px;
+  font-size: 28px;
 }
 
 
@@ -469,73 +481,196 @@ hr {
 }
 
 @media only screen and (max-height: 1000px) {
-  .container{
-    height: 850px;
+  .container {
+    height: 1000px;
   }
 }
 
 @media only screen and (min-height: 600px) {
-  .container{
+  .container {
     height: 1050px;
   }
 }
 
 @media only screen and (max-height: 500px) {
-  .container{
+  .container {
     height: 850px;
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  .container{
+  .container {
     height: 650px;
   }
 }
 
 @media only screen and (min-width: 1000px) and (min-height: 900px) {
-  .container{
+  .container {
     height: 1050px;
-    .desktop-right .desktop-image{
-      margin-bottom: -150px;
-    }
   }
+
+  .card {
+    gap: 30px;
+  }
+
+  .main-title-desktop h1 {
+    font-size: 80px;
+  }
+
+  .desktop-right .desktop-image {
+    margin: 0 0 -200px;
+  }
+
+  .desktop-right .desktop-image img {
+    height: 900px;
+    width: 600px;
+  }
+
+  .hero-container p,
+  .hero-subtitle-container .hero-subtitle {
+    font-size: 40px;
+  }
+
+  .card input,
+  .select2 {
+    font-size: 28px;
+    width: 300px;
+    padding: 50px;
+  }
+
+  .button-container .btn {
+    width: 150px;
+    padding: 30px;
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 1400px) and (min-height: 600px) {
+  .left-desktop{
+    margin-right: 200px;
+  }
+}
+
+@media only screen and (min-width: 1350px) and (min-height: 1050px) {
+  .container {
+    height: 1200px;
+  }
+
+  .main-title-desktop h1 {
+    font-size: 110px;
+  }
+
+  .desktop-right .desktop-image {
+    margin: 0 0 -200px;
+  }
+
+  .desktop-right .desktop-image img {
+    height: 1000px;
+    width: 900px;
+  }
+
+  .hero-container p,
+  .hero-subtitle-container .hero-subtitle {
+    font-size: 50px;
+  }
+
+  .card input,
+  .select2 {
+    font-size: 35px;
+    width: 400px;
+    padding: 50px;
+  }
+
+  .button-container .btn {
+    width: 200px;
+    padding: 30px;
+    font-size: 45px;
+  }
+
+}
+
+@media only screen and (min-width: 1750px) and (min-height: 1050px) {
+  .main-title-desktop h1 {
+    font-size: 110px;
+  }
+
+  .desktop-right .desktop-image img {
+    height: 800px;
+  }
+
+  .hero-container p,
+  .hero-subtitle-container .hero-subtitle {
+    font-size: 50px;
+  }
+
+  .card input,
+  .select2 {
+    font-size: 35px;
+    width: 400px;
+    padding: 50px;
+  }
+
+  .button-container .btn {
+    padding: 30px;
+    font-size: 45px;
+  }
+
+  .desktop-right .desktop-image {
+    margin: 0 200px -200px;
+  }
+
+  .desktop-right .desktop-image img {
+    height: 1000px;
+    width: 900px;
+  }
+
 }
 
 
 @media only screen and (min-width: 900px) and (max-width: 999px) {
-  .container{
+  .container {
     height: 1050px;
   }
 }
 
-@media only screen and (max-width: 899px) {
-  .container{
+@media only screen and (min-width: 1800px) and (min-height: 1050px) {
+
+  .footer .footer-prize,
+  .footer .footer-title {
+    font-size: 50px;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .container {
     height: 950px;
   }
 }
 
 
-@media only screen and (max-width: 750px) {
-  .container{
+@media only screen and (max-width: 650px) {
+  .container {
     height: 850px;
   }
 }
 
 
-@media only screen and (max-width: 599px) {
-  .container{
+@media only screen and (max-width: 500px) {
+  .container {
     height: 750px;
   }
 }
 
-@media only screen and (max-width: 449px) {
-  .container{
+@media only screen and (max-width: 350px) {
+  .container {
     height: 650px;
   }
 }
 
 
 @media only screen and (min-width: 1000px) {
+
   .main-title-mobile,
   .mobile-image,
   .footer-mobile {
@@ -544,6 +679,7 @@ hr {
 }
 
 @media only screen and (max-width: 999px) {
+
   .main-title-desktop,
   .desktop-right,
   .desktop-left-content,
@@ -611,12 +747,12 @@ hr {
 
   .hero-title {
     color: var(--primary-color);
-    font-size: 20px;
+    font-size: 35px;
     text-align: center;
     font-family: FbSpoiler-bold;
     padding-top: 6px;
     white-space: nowrap;
-    color: white;
+    color: var(--primary-color);
   }
 
   .hero-subtitle-container {
@@ -627,7 +763,7 @@ hr {
 
   .hero-subtitle {
     color: var(--primary-color);
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     font-family: FbSpoiler-bold;
     padding-top: 6px;
@@ -654,7 +790,7 @@ hr {
   }
 
   .card button {
-    width: 200px;
+    width: 100px;
     font-size: 30px;
   }
 
@@ -666,6 +802,7 @@ hr {
 
   .mobile-image img {
     width: 100%;
+    margin-top: 30px;
   }
 
   hr {
@@ -702,7 +839,7 @@ hr {
   }
 
   .footer .footer-title {
-    font-size: 15px;
+    font-size: 20px;
     color: white;
     font-family: "FbSpoiler-Regular";
     letter-spacing: 2px;
@@ -717,7 +854,7 @@ hr {
   }
 
   .footer .footer-contact {
-    font-size: 15px;
+    font-size: 20px;
     color: white;
     font-family: "FbSpoiler-Regular";
     letter-spacing: 2px;
